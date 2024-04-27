@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Планер</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- Контейнер для гифа Ретрофутуризм -->
+        <div class="retro-container">
+            <img src="ретрофутуризм.gif" alt="RetroFamily">
+        </div>
+    </header>
+        <!-- Контейнер для добавления новых задач -->
+        <div id="container">
+        <div class="add-task-container">
+    <select id="sectionSelector" onchange="changeSection()">
+        <option value="active">Активные дела</option>
+        <option value="completed">Завершенные дела</option>
+        <option value="deleted">Удаленные дела</option>
+    </select>
+    <input type="text" id="taskInput" placeholder="Добавить новое дело">
+    <button id="addTaskBtn" onclick="addTask()">+</button>
+    <button id="addTaskBtn" onclick="deleteAllTasks()">Удалить все задачи</button>
+    <button id="addTaskBtn" onclick="sortTasks()">Сортировать по алфавиту</button>
+</div>
+        <!-- Гиф робота -->
+        <img src="робот.gif" alt="Робот" id="robotImage">
+        <!-- Контейнер для активных задач -->
+        <div class="task-container" id="activeTasksContainer">
+            <h2>Активные дела</h2>
+            <!-- Список активных задач -->
+            <ul id="activeTasks" class="task-list"></ul>
+        </div>
+        <!-- Контейнер для завершенных задач -->
+        <div class="task-container" id="completedTasksContainer">
+            <h2>Завершённые дела</h2>
+            <!-- Список завершенных задач -->
+            <ul id="completedTasks" class="task-list"></ul>
+        </div>
+        <!-- Контейнер для удаленных задач -->
+        <div class="task-container" id="deletedTasksContainer">
+            <h2>Удалённые дела</h2> 
+            <!-- Список удаленных задач -->
+            <ul id="deletedTasks" class="task-list"></ul>
+        </div>
+    </div>
+    <footer>
+        <blockquote>
+             Retrofuturism
+        </blockquote>
+    </footer>
+    <!-- Подключение внешнего скрипта -->
+    <script src="script.js"></script>
+</body>
+</html>

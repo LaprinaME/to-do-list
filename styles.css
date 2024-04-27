@@ -1,0 +1,219 @@
+body {
+    font-family: 'Comic Sans MS', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:  #82898F; 
+    overflow: auto;
+}
+
+header {
+    background-color: #F5F5DC; 
+    padding: 7vw;
+    text-align: center;
+    position: fixed;
+    height: 20vh;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+footer {
+    background-color: #F5F5DC;
+    padding: 5px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+}
+
+blockquote {
+    color: #CA3F4C;
+    font-size: 1.5em;
+}
+
+h2 {
+    font-family: 'Comic Sans MS', sans-serif;
+    color: #F5F5DC;
+}
+.retro-container img {
+    width: 600px;
+    height: auto;
+    animation: jump 1s infinite;
+    border: 4px solid #fff;
+    border-radius: 0.5%;
+}
+
+#container {
+    background-color: #CA3F4C; 
+    border-radius: 15px;
+    height: auto;
+    width: auto;
+    text-align: center;
+    margin: 350px auto;
+    padding: 20px;
+    border: 2px solid #fff;
+}
+
+/* Стили для гифа робота */
+#robotImage {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #fff; 
+}
+
+.task-list {
+    border: 1px solid #ddd;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-container {
+    margin-bottom: 5vw;
+}
+
+.task {
+    padding: 2vw;
+    border: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    background-color: #F5F5DC; 
+    margin-bottom: 2vw;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #ddd;
+}
+
+.trash {
+    cursor: pointer;
+    color: #EE204D; /* Красный цвет */
+}
+
+.completed-btn,
+.delete-btn,
+.restore-btn,
+#addTaskBtn {
+    cursor: pointer;
+    background-color: #E5E4E2; 
+    color: #1E5945;
+    border: none;
+    padding: 1vw 2vw;
+    margin-left: 1vw;
+    border-radius: 1vw;
+}
+
+.delete-forever-btn {
+    cursor: pointer;
+    background-color: #CA3F4C; 
+    color: #fff;
+    border: none;
+    padding: 1vw 2vw;
+    margin-left: 1vw;
+    border-radius: 1vw;
+}
+
+.add-task-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5vw;
+}
+
+#sectionSelector {
+    font-family: 'Comic Sans MS', sans-serif;
+    font-size: 16pt;
+    color: #1E5945; /* Цвет текста */
+    background-color: #E5E4E2; /* Цвет фона */
+    border: 2px solid #F5F5DC;
+    border-radius: 5px; /* Скругление углов */
+    padding: 8px; /* Внутренний отступ */
+    cursor: pointer;
+}
+
+#sectionSelector option {
+    font-size: 16pt;
+    color: #CA3F4C; /* Цвет текста внутри списка */
+}
+
+#taskInput {
+    font-family: 'Comic Sans MS', sans-serif;
+    font-size: 16pt; /* Размер шрифта */
+    padding: 8px; /* Внутренний отступ */
+    margin-right: 1vw;
+    width: 60%; /* Ширина поля ввода */
+    border: 2px solid #F5F5DC;
+    border-radius: 5px; /* Скругление углов */
+}
+#addTaskBtn {
+    font-family: 'Comic Sans MS', sans-serif;
+    background-color: #F5F5DC; 
+    color: #1E5945;
+    border: none;
+    padding: 1vw 2vw;
+    cursor: pointer;
+}
+
+.task-container {
+    display: none;
+}
+
+
+
+#addTaskBtn,
+#deleteAllTasksBtn,
+#sortTasksBtn {
+    cursor: pointer;
+    background-color: #E5E4E2;
+    color: #1E5945;
+    border: none;
+    padding: 1vw 2vw;
+    margin-left: 1vw;
+    border-radius: 1vw;
+}
+
+#deleteAllTasksBtn {
+    background-image: url('delete-icon.png'); /* Replace with your delete icon image path */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#sortTasksBtn {
+    background-image: url('sort-icon.png'); /* Replace with your sort icon image path */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@media screen and (max-width: 600px) {
+    #addTaskBtn,
+    #deleteAllTasksBtn,
+    #sortTasksBtn {
+        padding: 1vw;
+        font-size: 0;
+    }
+
+    #addTaskBtn .button-text::before {
+        content: '+';
+        font-size: 1.5em;
+        display: inline-block;
+    }
+
+    /* Remove the Font Awesome icon content */
+    #deleteAllTasksBtn .button-text::before,
+    #sortTasksBtn .button-text::before {
+        content: '';
+    }
+}
+
+
+
+
+
